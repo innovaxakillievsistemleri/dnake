@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "DNAKE C112 door station",
+        "description": "Enter the door station's IP address and web interface credentials. Enable 'Open relay via HTTP' on the device so the unlock button works.",
+        "data": {
+          "host": "Host",
+          "username": "Username",
+          "password": "Password",
+          "rtsp_port": "RTSP port",
+          "rtsp_path": "RTSP path"
+        },
+        "data_description": {
+          "host": "IP address or hostname of the C112, e.g. 192.168.1.50",
+          "username": "Web interface username (default: admin)",
+          "password": "Web interface password. Also used for the RTSP stream.",
+          "rtsp_port": "Default: 8554",
+          "rtsp_path": "Default: ch01"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the door station. Check the address and network.",
+      "unknown": "Unexpected error. See the logs."
+    },
+    "abort": {
+      "already_configured": "This door station is already configured."
+    },
+    "create_entry": {
+      "default": "Set up. In the C112 web interface, set the HTTP command for doorbell press to:\n\n`{webhook_url}`"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "DNAKE C112 options",
+        "description": "Doorbell webhook URL to enter in the C112:\n\n`{webhook_url}`",
+        "data": {
+          "ring_duration": "Ringing duration",
+          "local_only": "Accept webhook from local network only"
+        },
+        "data_description": {
+          "ring_duration": "How long the 'Ringing' sensor stays on after a press.",
+          "local_only": "Turn off only if the C112 reaches Home Assistant from outside your local network."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "ringing": { "name": "Ringing" }
+    },
+    "button": {
+      "unlock": { "name": "Unlock door" }
+    },
+    "camera": {
+      "door": { "name": "Door camera" }
+    },
+    "event": {
+      "ring": {
+        "name": "Doorbell",
+        "state_attributes": {
+          "event_type": {
+            "state": { "ring": "Ring" }
+          }
+        }
+      }
+    }
+  }
+}
