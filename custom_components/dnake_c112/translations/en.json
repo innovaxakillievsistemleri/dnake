@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "DNAKE C112 door station",
+        "title": "Innovax İnterkom",
         "description": "Enter the door station's IP address and web interface credentials. Enable 'Open relay via HTTP' on the device so the unlock button works.",
         "data": {
           "host": "Host",
@@ -34,7 +34,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "DNAKE C112 options",
+        "title": "Innovax İnterkom options",
         "description": "Doorbell webhook URL to enter in the C112:\n\n`{webhook_url}`",
         "data": {
           "ring_duration": "Ringing duration",

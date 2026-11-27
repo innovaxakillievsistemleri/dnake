@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "DNAKE C112 kapı paneli",
+        "title": "Innovax İnterkom",
         "description": "Kapı panelinin IP adresini ve web arayüzü kimlik bilgilerini girin. Kapı açma butonunun çalışması için cihazda 'Open relay via HTTP' seçeneğini açın.",
         "data": {
           "host": "Adres",
@@ -34,7 +34,7 @@
   "options": {
     "step": {
       "init": {
-        "title": "DNAKE C112 seçenekleri",
+        "title": "Innovax İnterkom seçenekleri",
         "description": "C112'ye girilecek zil webhook adresi:\n\n`{webhook_url}`",
         "data": {
           "ring_duration": "Zil çalma süresi",

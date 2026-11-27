@@ -117,7 +117,7 @@ class DnakeC112ConfigFlow(ConfigFlow, domain=DOMAIN):
             else:
                 webhook_id = webhook.async_generate_id()
                 return self.async_create_entry(
-                    title=f"{MODEL} {api.host}",
+                    title=f"Innovax İnterkom {api.host}",
                     data={**user_input, CONF_WEBHOOK_ID: webhook_id},
                     description_placeholders={
                         "webhook_url": webhook_url(self.hass, webhook_id)
